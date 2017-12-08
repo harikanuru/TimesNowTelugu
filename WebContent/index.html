@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ColourNews Pro</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css"
+	href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font.css">
+<link rel="stylesheet" type="text/css" href="assets/css/li-scroller.css">
+<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+<link rel="stylesheet" type="text/css"
+	href="assets/css/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css" href="assets/css/theme.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+<script src="assets/js/app/app.js"></script>
+<script src="js/app.js"></script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="homeController">
+	<div id="preloader">
+		<div id="status">&nbsp;</div>
+	</div>
+	<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+	<div class="container">
+		<header id="header">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="header_top">
+						<div class="header_top_left">
+							<p id="date">{{currentdate |date:'EEEE , MMMM dd , yyyy'}}</p>
+						</div>
+						<div class="header_top_right">
+							<div class="social_area">
+								<ul class="social_nav">
+									<li class="facebook"><a href="#"></a></li>
+									<li class="twitter"><a href="#"></a></li>
+									<li class="flickr"><a href="#"></a></li>
+									<li class="pinterest"><a href="#"></a></li>
+									<li class="googleplus"><a href="#"></a></li>
+									<li class="vimeo"><a href="#"></a></li>
+									<li class="youtube"><a href="#"></a></li>
+									<li class="mail"><a href="#"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="header_bottom">
+						<div class="logo_area">
+							<a href="index.html" class="logo"><h2>
+									<span style="color: #5f9726">Colour</span><span>News</span> <span
+										style="color: #5f9726">Pro</span>
+								</h2>
+						</div>
+						<div class="add_banner">
+							<a href="#"><img src="images/addbanner_728x90_V1.jpg" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section id="navArea">
+			<nav class="navbar navbar-inverse" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+						aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav main_nav">
+						<li class="active"><a href="#!/homepage"><span
+								class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
+						<li ng-click="getNewsItems(14)"><a href="#!/andhra">ఆంధ్రప్రదేశ్ </a></li>
+						<li class="dropdown" ng-click="getNewsItems(15)" ><a href="#!/telangana">తెలంగాణ</a></li>
+						<li class="dropdown" ng-click="getNewsItems(7)"><a href="#!/movies">సినిమాలు </a></li>
+						<li class="dropdown" ng-click="getNewsItems(9)"><a href="#!sports">క్రీడలు</a></li>
+						<li class="dropdown" ng-click="getNewsItems(10)"><a href="#!study">విద్య</a></li>
+						<li class="dropdown" ng-click="getNewsItems(11)"><a href="#!jobs">ఉద్యోగాలు</a></li>
+						<li class="dropdown" ng-click="getNewsItems(12)"><a href="#!national">జాతీయం</a></li>
+						<li class="dropdown" ng-click="getNewsItems(13)"><a href="#!international">అంతర్జాతీయం</a>
+					</ul>
+				</div>
+			</nav>
+		</section>
+
+		<div>
+			<div ng-view></div>
+		</div>
+
+		<footer id="footer">
+			<div class="footer_top">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="footer_widget wow fadeInLeftBig">
+							<h2>Flickr Images</h2>
+							<ul class="tag_nav">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Contact Us</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="footer_widget wow fadeInDown">
+							<h2>Read</h2>
+							<ul class="tag_nav">
+								<li><a href="#">Latest News</a></li>
+								<li><a href="#">సినిమాలు</a></li>
+								<li><a href="#">రాజకీయాలు</a></li>
+								<li><a href="#">గాసిప్</a></li>
+								<li><a href="#">సంపాదన</a></li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-">
+						<div class="footer_widget wow fadeInRightBig">
+							<h2>Articles</h2>
+							<ul class="tag_nav">
+								<li><a href="#">టెహ్రాన్‌లో నేలకొరిగిన ముష్కరులు[</a></li>
+								<li><a href="#">ఆ విషయం ఐసీసీకి కూడా తెలియదు</a></li>
+								<li><a href="#">బెయిల్‌పై వచ్చిన నాయకులకు బుద్ధి
+										చెప్పండి[</a></li>
+								<li><a href="#">ఘనంగా గోవిందరాజ స్వామివారి రథోత్సవం</a></li>
+								<li><a href="#">చంచల్‌గూడ జైలుకు దీపక్‌రెడ్డి తరలింపు</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-">
+						<div class="footer_widget wow fadeInRightBig">
+							<h2>Follow Us</h2>
+							<ul class="tag_nav">
+								<li><i class="fa fa-facebook" aria-hidden="true"></i><a
+									href="https://www.facebook.com/">facebook</a></img></li>
+								<li><i class="fa fa-twitter" aria-hidden="true"></i><a
+									href="https://twitter.com/">Twitter</a></li>
+								<li><i class="fa fa-google-plus" aria-hidden="true"></i><a
+									href="https://plus.google.com/">Google+</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<p class="copyright">
+					All rights are Reserved <a href="index.html"> Home</a>
+				</p>
+			</div>
+		</footer>
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/jquery.li-scroller.1.0.js"></script>
+	<script src="assets/js/jquery.newsTicker.min.js"></script>
+	<script src="assets/js/jquery.fancybox.pack.js"></script>
+	<script src="assets/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+.scrollToTop{background-color:#d083cf; color:#fff}
+.scrollToTop:hover, .scrollToTop:focus{background-color:#fff; color:#d083cf; border-color:1px solid #5f9726}
+.logo > span{color:#d083cf}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus{background-color:#5f9726}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{background-color:#5f9726}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{background-color:#5f9726}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus{background-color:#5f9726}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{background-color:#5f9726}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus{background-color:#5f9726}
+.latest_newsarea span{background:none repeat scroll 0 0 #5f9726}
+.latest_post > h2 span{background:none repeat scroll 0 0 #f7766c}
+.headingDesign{
+        color: #fff;
+    font-family: 'Oswald',sans-serif;
+    font-size: 18px;
+    margin-top: 5px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    border-bottom: 3px solid #ea1ee8;
+}
+.headingDesign span{
+    background:none repeat scroll 0 0 #ea1ee8;
+        padding: 2px 10px;
+}
+.mainheadingDesign{
+        color: #fff;
+    font-family: 'Oswald',sans-serif;
+    font-size: 18px;
+    margin-top: 5px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding: 0;
+    position: relative;
+    text-transform: uppercase;
+    border-bottom: 3px solid #ea1ee8;
+}
+.mainheadingDesign span{
+    background:none repeat scroll 0 0 #ea1ee8;
+        padding: 2px 500px;
+}
+.contentcard{
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
+    transition: 0.1s;
+}
+.contentcard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+#prev-button{color:#d083cf}
+#next-button{color:#d083cf}
+.single_post_content > h2 span{background:none repeat scroll 0 0 #5f9726}
+.single_sidebar > h2 span{ background:none repeat scroll 0 0 #5f9726}
+.bsbig_fig figcaption a:hover{color:#5f9726}
+.spost_nav .media-body > a:hover{color:#5f9726}
+.cat-item a:hover{background-color:#5f9726}
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus{background-color:#5f9726}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{background-color:#5f9726}
+.single_sidebar > ul > li a:hover{color:#5f9726}
+.footer_widget > h2:hover{color:#5f9726}
+.tag_nav li a:hover{color:#5f9726; border-color:#5f9726}
+.copyright a:hover{color:#5f9726}
+.post_commentbox a:hover, .post_commentbox span:hover{color:#5f9726}
+.breadcrumb{border-left:10px solid #5f9726}
+.single_page_content ul li:before{background-color:#5f9726}
+.single_page_content h2, .single_page_content h3, .single_page_content h4, .single_page_content h5, .single_page_content h6{color:#5f9726}
+.nav-slit .icon-wrap{background-color:#5f9726}
+.nav-slit h3{background:#5f9726}
+.catgArchive{background-color:#5f9726}
+.error_page > h3{color:#5f9726}
+.error_page > span{background:none repeat scroll 0 0 #5f9726}
+.error_page > a{background-color:#5f9726}
+.contact_area > h2{background-color:#5f9726}
+.contact_form input[type="submit"]{background-color:#5f9726}
+.contact_form input[type="submit"]:hover{background-color:#fff; color:#5f9726}
+.related_post > h2 i{color:#5f9726}
+.form-control:focus{border-color:#5f9726;  box-shadow:0 0px 1px #5f9726 inset,0 0 5px #5f9726}

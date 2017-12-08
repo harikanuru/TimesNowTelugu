@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ColourNews Pro</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css"
+	href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font.css">
+<link rel="stylesheet" type="text/css" href="assets/css/li-scroller.css">
+<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+<link rel="stylesheet" type="text/css"
+	href="assets/css/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css" href="assets/css/theme.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+
+<script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+<script src="assets/js/app/app.js"></script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="AppController">
+	<div id="preloader">
+		<div id="status">&nbsp;</div>
+	</div>
+	<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+	<div class="container">
+
+		<header id="header">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="header_top">
+						<div class="header_top_left">
+							<p id="date">{{currentdate |date:'EEEE , MMMM dd , yyyy'}}</p>
+						</div>
+						<div class="header_top_right">
+							<div class="social_area">
+								<ul class="social_nav">
+									<li class="facebook"><a href="#"></a></li>
+									<li class="twitter"><a href="#"></a></li>
+									<li class="flickr"><a href="#"></a></li>
+									<li class="pinterest"><a href="#"></a></li>
+									<li class="googleplus"><a href="#"></a></li>
+									<li class="youtube"><a href="#"></a></li>
+									<li class="mail"><a href="#"></a></li>
+									<button type="button" class="btn btn-info"><a href="login.jsp">SignIn</a></button>
+
+								</ul>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="header_bottom">
+						<div class="logo_area">
+							<a href="index.html" class="logo"><h2>
+									<span style="color: #5f9726">Colour</span><span>News</span> <span
+										style="color: #5f9726">Pro</span>
+								</h2>
+						</div>
+						<div class="add_banner">
+							<a href="#"><img src="images/addbanner_728x90_V1.jpg" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section id="navArea">
+			<nav class="navbar navbar-inverse" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+						aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav main_nav">
+						<li class="active"><a href="index.html"><span
+								class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
+						<li><a href="andhrapradesh.html">ఆంధ్రప్రదేశ్ </a></li>
+						<li class="dropdown"><a href="Telangana.html">తెలంగాణ</a></li>
+						<li class="dropdown"><a a href="movies.html">సినిమాలు </a></li>
+						<li class="dropdown"><a href="sports.html">క్రీడలు</a></li>
+						<li class="dropdown"><a href="study.html">విద్య</a></li>
+						<li class="dropdown"><a href="jobs.html">ఉద్యోగాలు</a></li>
+						<li class="dropdown"><a href="national.html">జాతీయం</a></li>
+						<li class="dropdown"><a href="international.html">అంతర్జాతీయం</a>
+					</ul>
+				</div>
+			</nav>
+		</section>
+		<section id="newsSection">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 ">
+					<div class="latest_newsarea">
+						<span>తాజావార్తలు</span>
+						<ul id="ticker01" class="news_sticker">
+							<li><a href="#"><img src="images/news_thumbnail3.jpg"
+									alt="">బేడీలు వేయటం పొరపాటే: మంత్రి</a></li>
+							<li><a href="#"><img src="images/news_thumbnail3.jpg"
+									alt="">ట్రిపుల్ తలాఖ్ అంటే... ఉరిశిక్ష లాంటిదే: సీజే</a></li>
+							<li><a href="#"><img src="images/news_thumbnail3.jpg"
+									alt="">అమ్మకానికి ‘అమరావతి’</a></li>
+							<li><a href="#"><img src="images/news_thumbnail3.jpg"
+									alt="">టీడీపీ ఎమ్మెల్సీ ఇళ్లలో సీబీఐ సోదాలు </a></li>
+							<li><a href="#"><img src="images/news_thumbnail3.jpg"
+									alt="">హీరోపై హత్యాబెదిరింపుల కేసు</a></li>
+							<li><a href="#"><img src="images/news_thumbnail3.jpg"
+									alt="">‘కేసుల ఉపసంహరణకు 132 జీవోలు’</a></li>
+							<li><a href="#"><img src="images/news_thumbnail3.jpg"
+									alt="">పనికిరారని ముద్ర వేసి.. టెకీలను పంపేస్తున్నారు</a></li>
+							<li><a href="#"><img src="images/news_thumbnail3.jpg"
+									alt="">సీబీఎస్‌ఈ స్కూళ్లలో ఆధార్‌ నమోదు కేంద్రాలు! </a></li>
+							<li><a href="#"><img src="images/news_thumbnail2.jpg"
+									alt="">రేపు పశ్చిమలో వైఎస్‌ జగన్‌ పర్యటన </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="sliderSection">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 ">
+					<h2 class="mainheader">
+						<span>ప్రధాన వార్తలు</span>
+					</h2>
+				</div>
+				<div class="col-lg-7 col-md-12 col-sm-12">
+					<div class="total_slider">
+						<div class="card">
+							<carousel interval="myInterval"> <slide
+								ng-repeat="slide in slides1" active="slide.active"> <img
+								ng-src="{{slide.image}}" style="width: 100%; height: 350px;">
+
+							<div class="carousel-caption">బేడీలు వేయటం పొరపాటే: మంత్ర</div>
+							</slide> </carousel>
+							<!--      <img src="images/featured_img1.jpg" alt="Avatar" > -->
+							<!--  <div class="cardcontainer">
+                <h4><b>‘బాహుబలి-2’ చూడనున్న బీబర్‌</b></h4> 
+                <p>ముంబయి: గ్లోబల్‌ పాప్‌స్టార్‌ జస్టిన్‌ బీబర్‌ ‘బాహుబలి-2’ సినిమా చూడబోతున్నాడట. వరల్డ్‌ టూర్‌ నిమిత్తం మంగళవారం రాత్రి ఒంటి గంట సమయంలో బీబర్‌ ముంబయి చేరుకున్నాడు. ఈ రోజు రాత్రి 8 గంటలకు డీవై పటేల్‌ స్టేడియంలో బీబర్‌ ప్రదర్శన ఇవ్వబోతున్నాడు. అయితే బీబర్‌ మరో మూడు రోజుల పాటు భారత్‌లో పర్యటించనున్నాడు. ఈ నేపథ్యంలో బీబర్‌ ‘బాహుబలి-2’.... </p> 
+				
+              </div> -->
+							<!--  <div style="padding-right: 10px;text-align: right;padding-bottom: 10px;;"><a href="#" style="color: #337ab7;">మరిన్ని</a></div>  -->
+						</div>
+						<!-- <div class="hedings-text">
+					ఫ్యాషన్
+					</div> -->
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-12 col-sm-12">
+					<div class="right_content">
+						<!--   <h2 class="headingDesign" style="border-bottom:3px solid rgba(245, 245, 245, 0.32)"></h2> -->
+						<div class="single_sidebar">
+							<ul class="spost_nav">
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img1.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title"> బేడీలు
+												వేయటం పొరపాటే: మంత్రి</a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" " class="media-left"> <img
+											alt="" src="images/post_img2.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title"> బేడీలు
+												వేయటం పొరపాటే: మంత్రి</a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img1.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title"> బేడీలు
+												వేయటం పొరపాటే: మంత్రి</a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img2.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title">
+												మరికొద్ది గంటల్లో మూడో ప్రపంచ యుద్ధం! </a>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div style="padding-right: 10px; text-align: right;">
+								<a href="fasionList.html" style="color: #337ab7;">మరిన్ని</a>
+							</div>
+							<!--  -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<section id="contentSection">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="left_content">
+						<h2 class="headingDesign">
+							<span>ఆంధ్రప్రదేశ్</span>
+						</h2>
+						<div class="single_post_content">
+							<div class="single_post_content_right">
+								<ul class="spost_nav">
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img1.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">
+													రణ్‌బీర్‌పాట..అమితాబ్‌ మనవరాలి డాన్సులు! </a>
+											</div>
+										</div>
+									</li>
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img2.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">
+													రణ్‌బీర్‌పాట..అమితాబ్‌ మనవరాలి డాన్సులు! </a>
+											</div>
+										</div>
+									</li>
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img1.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">రణ్‌బీర్‌పాట..అమితాబ్‌
+													మనవరాలి డాన్సులు! </a>
+											</div>
+										</div>
+									</li>
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img2.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">రణ్‌బీర్‌పాట..అమితాబ్‌
+													మనవరాలి డాన్సులు! </a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div
+								style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+								<a style="color: #337ab7;" href="andhrapradesh.html">మరిన్ని</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="right_content">
+						<h2 class="headingDesign">
+							<span>తెలంగాణ</span>
+						</h2>
+						<div class="single_sidebar">
+							<ul class="spost_nav">
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img1.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title"> కాలేయం
+												నుంచి 6.2 కిలోల కణితి తొలగింపు</a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img2.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title"> కాలేయం
+												నుంచి 6.2 కిలోల కణితి తొలగింపు</a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img1.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title"> కాలేయం
+												నుంచి 6.2 కిలోల కణితి తొలగింపు</a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img2.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title"> కాలేయం
+												నుంచి 6.2 కిలోల కణితి తొలగింపు</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div
+								style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+								<a href="Telangana.html" style="color: #337ab7;">మరిన్ని</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="left_content">
+						<h2 class="headingDesign">
+							<span>సినిమాలు</span>
+						</h2>
+						<div class="single_post_content">
+							<div class="single_post_content_right">
+								<ul class="spost_nav">
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img1.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">
+													ట్రిపుల్ తలాఖ్ అంటే... ఉరిశిక్ష లాంటిదే: సీజే </a>
+											</div>
+										</div>
+									</li>
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img2.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">
+													ట్రిపుల్ తలాఖ్ అంటే... ఉరిశిక్ష లాంటిదే: సీజే </a>
+											</div>
+										</div>
+									</li>
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img1.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">
+													ట్రిపుల్ తలాఖ్ అంటే... ఉరిశిక్ష లాంటిదే: సీజే </a>
+											</div>
+										</div>
+									</li>
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img2.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">
+													ట్రిపుల్ తలాఖ్ అంటే... ఉరిశిక్ష లాంటిదే: సీజే </a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div
+								style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+								<a href="movies.html" style="color: #337ab7;">మరిన్ని</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="right_content">
+						<h2 class="headingDesign">
+							<span>క్రీడలు</span>
+						</h2>
+						<div class="single_sidebar">
+							<ul class="spost_nav">
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img1.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title"> మా
+												మిషన్లు ఇస్తాం.. దమ్ముంటే హ్యాక్ చేయండి! </a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img2.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title"> మా
+												మిషన్లు ఇస్తాం.. దమ్ముంటే హ్యాక్ చేయండి! </a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img1.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title">మా
+												మిషన్లు ఇస్తాం.. దమ్ముంటే హ్యాక్ చేయండి! </a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img2.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title"> మా
+												మిషన్లు ఇస్తాం.. దమ్ముంటే హ్యాక్ చేయండి! </a>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div
+								style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+								<a style="color: #337ab7;" href="sports.html">మరిన్ని</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="left_content">
+						<h2 class="headingDesign">
+							<span>జాతీయం</span>
+						</h2>
+						<div class="single_post_content">
+							<div class="single_post_content_right">
+								<ul class="spost_nav">
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img1.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">శాస్త్ర,సాంకేతికతల
+													అభివృద్ధితో అంతరాల నిర్మూలన: ప్రణబ్‌</a>
+											</div>
+										</div>
+									</li>
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img2.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">
+													శాస్త్ర,సాంకేతికతల అభివృద్ధితో అంతరాల నిర్మూలన: ప్రణబ్‌</a>
+											</div>
+										</div>
+									</li>
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img1.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">
+													శాస్త్ర,సాంకేతికతల అభివృద్ధితో అంతరాల నిర్మూలన: ప్రణబ్‌</a>
+											</div>
+										</div>
+									</li>
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img2.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">
+													శాస్త్ర,సాంకేతికతల అభివృద్ధితో అంతరాల నిర్మూలన: ప్రణబ్‌</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div
+								style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+								<a href="national.html" style="color: #337ab7;">మరిన్ని</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="right_content">
+						<h2 class="headingDesign">
+							<span> అంతర్జాతీయ</span>
+						</h2>
+						<div class="single_sidebar">
+							<ul class="spost_nav">
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img1.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title">కొలంబో-వారణాసి
+												విమాన సేవలు</a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img2.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title">
+												కొలంబో-వారణాసి విమాన సేవలు</a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img1.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title">
+												కొలంబో-వారణాసి విమాన సేవలు</a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img2.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title">కొలంబో-వారణాసి
+												విమాన సేవలు</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div
+								style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+								<a href="international.html" style="color: #337ab7;">మరిన్ని</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="left_content">
+						<h2 class="headingDesign">
+							<span>విద్య</span>
+						</h2>
+						<div class="single_post_content">
+							<div class="single_post_content_right">
+								<ul class="spost_nav">
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img1.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">గ్రూప్‌
+													3 మెయిన్స్‌ ఆగస్టు 6న </a>
+											</div>
+										</div>
+									</li>
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img2.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">
+													గ్రూప్‌ 3 మెయిన్స్‌ ఆగస్టు 6న </a>
+											</div>
+										</div>
+									</li>
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img1.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">
+													గ్రూప్‌ 3 మెయిన్స్‌ ఆగస్టు 6న </a>
+											</div>
+										</div>
+									</li>
+									<li class="contentcard">
+										<div class="media wow fadeInDown">
+											<a href="newsdescription.html" class="media-left"> <img
+												alt="" src="images/post_img2.jpg">
+											</a>
+											<div class="media-body">
+												<a href="newsdescription.html" class="catg_title">
+													గ్రూప్‌ 3 మెయిన్స్‌ ఆగస్టు 6న </a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div
+								style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+								<a href="study.html" style="color: #337ab7;">మరిన్ని</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="right_content">
+						<h2 class="headingDesign">
+							<span>ఉద్యోగాలు</span>
+						</h2>
+						<div class="single_sidebar">
+							<ul class="spost_nav">
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img1.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title"> గ్లెన్
+												మార్క్ ఫార్మా భారీ పతనం </a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img2.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title"> గ్లెన్
+												మార్క్ ఫార్మా భారీ పతనం </a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img1.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title"> గ్లెన్
+												మార్క్ ఫార్మా భారీ పతనం </a>
+										</div>
+									</div>
+								</li>
+								<li class="contentcard">
+									<div class="media wow fadeInDown">
+										<a href="newsdescription.html" class="media-left"> <img
+											alt="" src="images/post_img2.jpg">
+										</a>
+										<div class="media-body">
+											<a href="newsdescription.html" class="catg_title">గ్లెన్
+												మార్క్ ఫార్మా భారీ పతనం </a>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div
+								style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+								<a href="jobs.html" style="color: #337ab7;">మరిన్ని</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer id="footer">
+			<div class="footer_top">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="footer_widget wow fadeInLeftBig">
+							<h2>Flickr Images</h2>
+							<ul class="tag_nav">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Contact Us</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="footer_widget wow fadeInDown">
+							<h2>Read</h2>
+							<ul class="tag_nav">
+								<li><a href="#">Latest News</a></li>
+								<li><a href="#">సినిమాలు</a></li>
+								<li><a href="#">రాజకీయాలు</a></li>
+								<li><a href="#">గాసిప్</a></li>
+								<li><a href="#">సంపాదన</a></li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-">
+						<div class="footer_widget wow fadeInRightBig">
+							<h2>Articles</h2>
+							<ul class="tag_nav">
+								<li><a href="#">టెహ్రాన్‌లో నేలకొరిగిన ముష్కరులు[</a></li>
+								<li><a href="#">ఆ విషయం ఐసీసీకి కూడా తెలియదు</a></li>
+								<li><a href="#">బెయిల్‌పై వచ్చిన నాయకులకు బుద్ధి
+										చెప్పండి[</a></li>
+								<li><a href="#">ఘనంగా గోవిందరాజ స్వామివారి రథోత్సవం</a></li>
+								<li><a href="#">చంచల్‌గూడ జైలుకు దీపక్‌రెడ్డి తరలింపు</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-">
+						<div class="footer_widget wow fadeInRightBig">
+							<h2>Follow Us</h2>
+							<ul class="tag_nav">
+								<li><i class="fa fa-facebook" aria-hidden="true"></i><a
+									href="https://www.facebook.com/">facebook</a></img></li>
+								<li><i class="fa fa-twitter" aria-hidden="true"></i><a
+									href="https://twitter.com/">Twitter</a></li>
+								<li><i class="fa fa-google-plus" aria-hidden="true"></i><a
+									href="https://plus.google.com/">Google+</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<p class="copyright">
+					All rights are Reserved <a href="index.html"> Home</a>
+				</p>
+			</div>
+		</footer>
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/jquery.li-scroller.1.0.js"></script>
+	<script src="assets/js/jquery.newsTicker.min.js"></script>
+	<script src="assets/js/jquery.fancybox.pack.js"></script>
+	<script src="assets/js/custom.js"></script>
+</body>
+</html>
