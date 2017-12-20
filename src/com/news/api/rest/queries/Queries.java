@@ -12,9 +12,9 @@ public interface Queries {
 	String DELETE_CATEGORY = "delete from Categories where categoryId = ?";
 
 	String INSERT_NEWS_ITEM = "insert into NewsItems(heading, news, categoryId , image) values(?, ? , ?, ?)";
-	
-	String GET_NEWS_ITEMS = "select * from NewsItems";
-	
+
+	String GET_NEWS_ITEMS = "select * from NewsItems where categoryId = ? limit 4";
+
 	String GET_ITEMS_BY_CATEGORY = "select * from NewsItems where categoryId = ?";
 
 }

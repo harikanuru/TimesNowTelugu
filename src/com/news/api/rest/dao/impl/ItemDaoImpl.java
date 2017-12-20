@@ -1,5 +1,6 @@
 package com.news.api.rest.dao.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import com.news.api.rest.dao.ItemDao;
 import com.news.api.rest.domain.Categories;
+import com.news.api.rest.domain.MainItems;
 import com.news.api.rest.domain.NewsItems;
 import com.news.api.rest.queries.Queries;
 
@@ -37,12 +39,28 @@ public class ItemDaoImpl implements ItemDao {
 	}
 
 	@Override
-	public List<NewsItems> getItems() {
+	public List<MainItems> getItems() {
 
-		List<NewsItems> newsItems = jdbcTemplate.query(Queries.GET_NEWS_ITEMS,
-				new BeanPropertyRowMapper<NewsItems>(NewsItems.class));
+		List<MainItems> mainItemsList = new ArrayList<MainItems>();
 
-		return newsItems;
+		List<Categories> categories = jdbcTemplate.query(Queries.GET_CATEGORIES,
+				new BeanPropertyRowMapper<Categories>(Categories.class));
+
+		for (int i = 0; i < categories.size(); i++) {
+
+			MainItems mainItem = new MainItems();
+
+			List<NewsItems> newsItems = jdbcTemplate.query(Queries.GET_NEWS_ITEMS,
+					new Object[] { categories.get(i).getCategoryId() },
+					new BeanPropertyRowMapper<NewsItems>(NewsItems.class));
+
+			mainItem.setCategoryName(categories.get(i).getCategoryName());
+			mainItem.setNewsItems(newsItems);
+			mainItemsList.add(mainItem);
+
+		}
+
+		return mainItemsList;
 	}
 
 	@Override

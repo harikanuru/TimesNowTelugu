@@ -11,8 +11,10 @@ import javax.ws.rs.core.Response;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.news.api.rest.domain.NewsItems;
+import com.news.api.rest.dto.CategoriesDto;
 import com.news.api.rest.dto.NewsItemsDto;
 import com.news.api.rest.service.ItemService;
 import com.news.api.rest.service.impl.ItemServiceImpl;
@@ -52,12 +54,14 @@ public class ItemsController {
 	}
 	
 	
-	@Path("/getItems/{categoryId}")
-	@GET
+	@Path("/getItemsByCategory")
+	@POST
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getItems(@PathVariable int categoryId) {
+	public Response getItems(@RequestBody CategoriesDto categories) {
+		
+		 System.out.println(categories.getCategoryId());
 
-		return Response.status(200).entity(itemService.getItems(categoryId)).build();
+		return Response.status(200).entity(itemService.getItems(categories.getCategoryId())).build();
 	}
 	
 	

@@ -4,7 +4,9 @@ import java.util.List;
 
 import com.news.api.rest.dao.ItemDao;
 import com.news.api.rest.dao.impl.ItemDaoImpl;
+import com.news.api.rest.domain.MainItems;
 import com.news.api.rest.domain.NewsItems;
+import com.news.api.rest.dto.MainItemsDto;
 import com.news.api.rest.dto.NewsItemsDto;
 import com.news.api.rest.service.ItemService;
 import com.news.api.rest.util.NewsItemUtils;
@@ -23,19 +25,19 @@ public class ItemServiceImpl implements ItemService {
 	}
 
 	@Override
-	public List<NewsItemsDto> getItems() {
+	public List<MainItemsDto> getItems() {
 
-		List<NewsItems> newItems = itemDao.getItems();
+		List<MainItems> mainItem = itemDao.getItems();
 
-		List<NewsItemsDto> newsItemsDtoList = NewsItemUtils.convertNewsItemDaoListToDtoList(newItems);
+		List<MainItemsDto> mainItemsListDto = NewsItemUtils.convertMainItemdaoToDtoList(mainItem);
 
-		return newsItemsDtoList;
+		return mainItemsListDto;
 	}
 
 	@Override
 	public List<NewsItemsDto> getItems(int categoryId) {
 
-		List<NewsItems> newItems = itemDao.getItems();
+		List<NewsItems> newItems = itemDao.getItems(categoryId);
 
 		List<NewsItemsDto> newsItemsDtoList = NewsItemUtils.convertNewsItemDaoListToDtoList(newItems);
 

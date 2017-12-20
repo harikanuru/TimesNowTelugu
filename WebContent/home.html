@@ -118,9 +118,6 @@
 		</div>
 	</div>
 </section>
-
-
-
 <section id="contentSection">
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6">
@@ -131,53 +128,22 @@
 				<div class="single_post_content">
 					<div class="single_post_content_right">
 						<ul class="spost_nav">
-							<li class="contentcard">
+							<li ng-repeat="item in mainItems[2].newsItems"
+								class="contentcard">
 								<div class="media wow fadeInDown">
 									<a href="newsdescription.html" class="media-left"> <img
 										alt="" src="images/post_img1.jpg">
 									</a>
 									<div class="media-body">
 										<a href="newsdescription.html" class="catg_title">
-											రణ్‌బీర్‌పాట..అమితాబ్‌ మనవరాలి డాన్సులు! </a>
-									</div>
-								</div>
-							</li>
-							<li class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img2.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">
-											రణ్‌బీర్‌పాట..అమితాబ్‌ మనవరాలి డాన్సులు! </a>
-									</div>
-								</div>
-							</li>
-							<li class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img1.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">రణ్‌బీర్‌పాట..అమితాబ్‌
-											మనవరాలి డాన్సులు! </a>
-									</div>
-								</div>
-							</li>
-							<li class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img2.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">రణ్‌బీర్‌పాట..అమితాబ్‌
-											మనవరాలి డాన్సులు! </a>
+											{{item.heading}}</a>
 									</div>
 								</div>
 							</li>
 						</ul>
+
 					</div>
-					<div
+					<div ng-click="getItemsByCateogry(3)"
 						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
 						<a href="#!/andhra">మరిన్ని</a>
 					</div>
@@ -191,57 +157,25 @@
 				</h2>
 				<div class="single_sidebar">
 					<ul class="spost_nav">
-						<li class="contentcard">
+						<li ng-repeat="item in mainItems[3].newsItems" class="contentcard">
 							<div class="media wow fadeInDown">
 								<a href="newsdescription.html" class="media-left"> <img
 									alt="" src="images/post_img1.jpg">
 								</a>
 								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title"> కాలేయం
-										నుంచి 6.2 కిలోల కణితి తొలగింపు</a>
+									<a href="newsdescription.html" class="catg_title">
+										{{item.heading}}</a>
 								</div>
 							</div>
 						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img2.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title"> కాలేయం
-										నుంచి 6.2 కిలోల కణితి తొలగింపు</a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img1.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title"> కాలేయం
-										నుంచి 6.2 కిలోల కణితి తొలగింపు</a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img2.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title"> కాలేయం
-										నుంచి 6.2 కిలోల కణితి తొలగింపు</a>
-								</div>
-							</div>
-						</li>
+
+
 					</ul>
-					<div
+					<div ng-click="getItemsByCateogry(4)"
 						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a href="Telangana.html" style="color: #337ab7;">మరిన్ని</a>
+						<a href="#!/telangana" style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -254,55 +188,23 @@
 				<div class="single_post_content">
 					<div class="single_post_content_right">
 						<ul class="spost_nav">
-							<li class="contentcard">
+							<li ng-repeat="item in mainItems[7].newsItems"
+								class="contentcard">
 								<div class="media wow fadeInDown">
 									<a href="newsdescription.html" class="media-left"> <img
 										alt="" src="images/post_img1.jpg">
 									</a>
 									<div class="media-body">
 										<a href="newsdescription.html" class="catg_title">
-											ట్రిపుల్ తలాఖ్ అంటే... ఉరిశిక్ష లాంటిదే: సీజే </a>
-									</div>
-								</div>
-							</li>
-							<li class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img2.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">
-											ట్రిపుల్ తలాఖ్ అంటే... ఉరిశిక్ష లాంటిదే: సీజే </a>
-									</div>
-								</div>
-							</li>
-							<li class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img1.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">
-											ట్రిపుల్ తలాఖ్ అంటే... ఉరిశిక్ష లాంటిదే: సీజే </a>
-									</div>
-								</div>
-							</li>
-							<li class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img2.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">
-											ట్రిపుల్ తలాఖ్ అంటే... ఉరిశిక్ష లాంటిదే: సీజే </a>
+											{{item.heading}}</a>
 									</div>
 								</div>
 							</li>
 						</ul>
 					</div>
-					<div
+					<div ng-click="getItemsByCateogry(8)"
 						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a href="movies.html" style="color: #337ab7;">మరిన్ని</a>
+						<a href="#!/movies" style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
 			</div>
@@ -314,54 +216,21 @@
 				</h2>
 				<div class="single_sidebar">
 					<ul class="spost_nav">
-						<li class="contentcard">
+						<li ng-repeat="item in mainItems[6].newsItems" class="contentcard">
 							<div class="media wow fadeInDown">
 								<a href="newsdescription.html" class="media-left"> <img
 									alt="" src="images/post_img1.jpg">
 								</a>
 								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title"> మా
-										మిషన్లు ఇస్తాం.. దమ్ముంటే హ్యాక్ చేయండి! </a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img2.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title"> మా
-										మిషన్లు ఇస్తాం.. దమ్ముంటే హ్యాక్ చేయండి! </a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img1.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title">మా
-										మిషన్లు ఇస్తాం.. దమ్ముంటే హ్యాక్ చేయండి! </a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img2.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title"> మా
-										మిషన్లు ఇస్తాం.. దమ్ముంటే హ్యాక్ చేయండి! </a>
+									<a href="newsdescription.html" class="catg_title">
+										{{item.heading}}</a>
 								</div>
 							</div>
 						</li>
 					</ul>
-					<div
+					<div ng-click="getItemsByCateogry(7)"
 						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a style="color: #337ab7;" href="sports.html">మరిన్ని</a>
+						<a style="color: #337ab7;" href="#!/sports">మరిన్ని</a>
 					</div>
 				</div>
 			</div>
@@ -376,55 +245,23 @@
 				<div class="single_post_content">
 					<div class="single_post_content_right">
 						<ul class="spost_nav">
-							<li class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img1.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">శాస్త్ర,సాంకేతికతల
-											అభివృద్ధితో అంతరాల నిర్మూలన: ప్రణబ్‌</a>
-									</div>
-								</div>
-							</li>
-							<li class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img2.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">
-											శాస్త్ర,సాంకేతికతల అభివృద్ధితో అంతరాల నిర్మూలన: ప్రణబ్‌</a>
-									</div>
-								</div>
-							</li>
-							<li class="contentcard">
+							<li ng-repeat="item in mainItems[1].newsItems"
+								class="contentcard">
 								<div class="media wow fadeInDown">
 									<a href="newsdescription.html" class="media-left"> <img
 										alt="" src="images/post_img1.jpg">
 									</a>
 									<div class="media-body">
 										<a href="newsdescription.html" class="catg_title">
-											శాస్త్ర,సాంకేతికతల అభివృద్ధితో అంతరాల నిర్మూలన: ప్రణబ్‌</a>
-									</div>
-								</div>
-							</li>
-							<li class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img2.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">
-											శాస్త్ర,సాంకేతికతల అభివృద్ధితో అంతరాల నిర్మూలన: ప్రణబ్‌</a>
+											{{item.heading}}</a>
 									</div>
 								</div>
 							</li>
 						</ul>
 					</div>
-					<div
+					<div ng-click="getItemsByCateogry(2)"
 						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a href="national.html" style="color: #337ab7;">మరిన్ని</a>
+						<a href="#!/national" style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
 			</div>
@@ -436,54 +273,21 @@
 				</h2>
 				<div class="single_sidebar">
 					<ul class="spost_nav">
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img1.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title">కొలంబో-వారణాసి
-										విమాన సేవలు</a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img2.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title">
-										కొలంబో-వారణాసి విమాన సేవలు</a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
+						<li ng-repeat="item in mainItems[0].newsItems" class="contentcard">
 							<div class="media wow fadeInDown">
 								<a href="newsdescription.html" class="media-left"> <img
 									alt="" src="images/post_img1.jpg">
 								</a>
 								<div class="media-body">
 									<a href="newsdescription.html" class="catg_title">
-										కొలంబో-వారణాసి విమాన సేవలు</a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img2.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title">కొలంబో-వారణాసి
-										విమాన సేవలు</a>
+										{{item.heading}}</a>
 								</div>
 							</div>
 						</li>
 					</ul>
-					<div
+					<div ng-click="getItemsByCateogry(1)"
 						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a href="international.html" style="color: #337ab7;">మరిన్ని</a>
+						<a href="#!/international" style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
 			</div>
@@ -498,55 +302,23 @@
 				<div class="single_post_content">
 					<div class="single_post_content_right">
 						<ul class="spost_nav">
-							<li class="contentcard">
+							<li ng-repeat="item in mainItems[5].newsItems"
+								class="contentcard">
 								<div class="media wow fadeInDown">
 									<a href="newsdescription.html" class="media-left"> <img
 										alt="" src="images/post_img1.jpg">
 									</a>
 									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">గ్రూప్‌
-											3 మెయిన్స్‌ ఆగస్టు 6న </a>
-									</div>
-								</div>
-							</li>
-							<li class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img2.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title"> గ్రూప్‌
-											3 మెయిన్స్‌ ఆగస్టు 6న </a>
-									</div>
-								</div>
-							</li>
-							<li class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img1.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title"> గ్రూప్‌
-											3 మెయిన్స్‌ ఆగస్టు 6న </a>
-									</div>
-								</div>
-							</li>
-							<li class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img2.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title"> గ్రూప్‌
-											3 మెయిన్స్‌ ఆగస్టు 6న </a>
+										<a href="newsdescription.html" class="catg_title">
+											{{item.heading}}</a>
 									</div>
 								</div>
 							</li>
 						</ul>
 					</div>
-					<div
+					<div ng-click="getItemsByCateogry(6)"
 						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a href="study.html" style="color: #337ab7;">మరిన్ని</a>
+						<a href="#!/study" style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
 			</div>
@@ -558,54 +330,21 @@
 				</h2>
 				<div class="single_sidebar">
 					<ul class="spost_nav">
-						<li class="contentcard">
+						<li ng-repeat="item in mainItems[4].newsItems" class="contentcard">
 							<div class="media wow fadeInDown">
 								<a href="newsdescription.html" class="media-left"> <img
 									alt="" src="images/post_img1.jpg">
 								</a>
 								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title"> గ్లెన్
-										మార్క్ ఫార్మా భారీ పతనం </a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img2.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title"> గ్లెన్
-										మార్క్ ఫార్మా భారీ పతనం </a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img1.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title"> గ్లెన్
-										మార్క్ ఫార్మా భారీ పతనం </a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img2.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title">గ్లెన్
-										మార్క్ ఫార్మా భారీ పతనం </a>
+									<a href="newsdescription.html" class="catg_title">
+										{{item.heading}}</a>
 								</div>
 							</div>
 						</li>
 					</ul>
-					<div
+					<div ng-click="getItemsByCateogry(5)"
 						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a href="jobs.html" style="color: #337ab7;">మరిన్ని</a>
+						<a href="#!/jobs" style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
 			</div>

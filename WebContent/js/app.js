@@ -5,10 +5,6 @@ app.controller('customersCtrl', function($rootScope, $scope, $http) {
 
 	$scope.addNewsItem = function(news) {
 
-		console.log(news.category);
-		console.log(news.matter);
-		console.log(news.heading);
-
 		var newsItem = {
 			"categoryId" : news.category,
 			"news" : news.matter,
@@ -25,21 +21,10 @@ app.controller('customersCtrl', function($rootScope, $scope, $http) {
 			console.log(response.statusText);
 		});
 
-		$http({
-			method : 'GET',
-			url : 'rest/category/getCategories'
-		}).then(function successCallback(response) {
-			$scope.categories = response.data;
-			console.log($scope.categories[0].categoryName)
-
-		}, function errorCallback(response) {
-			console.log(response.statusText);
-		});
-
 	};
 });
 
-app.controller('homeController', function($rootScope, $scope, $http) {
+app.controller('homeController', function($rootScope, $scope, $http, $location) {
 
 	console.log("home Controller")
 
@@ -48,14 +33,50 @@ app.controller('homeController', function($rootScope, $scope, $http) {
 		url : 'rest/category/getCategories'
 	}).then(function successCallback(response) {
 		$scope.categories = response.data;
-		console.log($scope.categories);
-		console.log($scope.categories[0].categoryName)
 
 	}, function errorCallback(response) {
-		console.log(response.statusText);
+		console.log(response);
 	});
 
+	$http({
+		method : 'GET',
+		url : 'rest/item/getItems'
+	}).then(function successCallback(response) {
+		$scope.mainItems = response.data;
+		console.log(response);
+
+	}, function errorCallback(response) {
+		console.log(response);
+	});
+
+	
+	$scope.getItemsByCateogry = function(categoryId) {
+		console.log(categoryId);
+		
+		var data = {"categoryId":categoryId}
+		$http({
+			method : 'POST',
+			url : 'rest/item/getItemsByCategory',
+			data : data
+				
+		}).then(function successCallback(response) {
+			$scope.newsItems = response.data;
+			console.log("Items by category")
+			console.log(response);
+            $location.path("movies");
+
+
+
+		}, function errorCallback(response) {
+			console.log(response);
+		});
+		
+		
+	};
+
 });
+
+
 
 /*
  * Routing Configuration
