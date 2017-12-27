@@ -24,59 +24,55 @@ app.controller('customersCtrl', function($rootScope, $scope, $http) {
 	};
 });
 
-app.controller('homeController', function($rootScope, $scope, $http, $location) {
+app.controller('homeController',
+		function($rootScope, $scope, $http, $location) {
 
-	console.log("home Controller")
+			$http({
+				method : 'GET',
+				url : 'rest/category/getCategories'
+			}).then(function successCallback(response) {
+				$scope.categories = response.data;
 
-	$http({
-		method : 'GET',
-		url : 'rest/category/getCategories'
-	}).then(function successCallback(response) {
-		$scope.categories = response.data;
+			}, function errorCallback(response) {
+				console.log(response);
+			});
 
-	}, function errorCallback(response) {
-		console.log(response);
-	});
+			$http({
+				method : 'GET',
+				url : 'rest/item/getItems'
+			}).then(function successCallback(response) {
+				$scope.mainItems = response.data;
+				console.log(response);
 
-	$http({
-		method : 'GET',
-		url : 'rest/item/getItems'
-	}).then(function successCallback(response) {
-		$scope.mainItems = response.data;
-		console.log(response);
+			}, function errorCallback(response) {
+				console.log(response);
+			});
 
-	}, function errorCallback(response) {
-		console.log(response);
-	});
+			$scope.getItemsByCateogry = function(categoryId) {
+				console.log(categoryId);
 
-	
-	$scope.getItemsByCateogry = function(categoryId) {
-		console.log(categoryId);
-		
-		var data = {"categoryId":categoryId}
-		$http({
-			method : 'POST',
-			url : 'rest/item/getItemsByCategory',
-			data : data
-				
-		}).then(function successCallback(response) {
-			$scope.newsItems = response.data;
-			console.log("Items by category")
-			console.log(response);
-            $location.path("movies");
+				var data = {
+					"categoryId" : categoryId
+				}
+				$http({
+					method : 'POST',
+					url : 'rest/item/getItemsByCategory',
+					data : data
 
+				}).then(function successCallback(response) {
+					$scope.newsItems = response.data;
+                    console.log($scope.newsItems[0]);
+					$location.path($scope.newsItems[0].categoryId+"");
 
+				}, function errorCallback(response) {
+					console.log(response);
+					console.log("Error")
 
-		}, function errorCallback(response) {
-			console.log(response);
+				});
+
+			};
+
 		});
-		
-		
-	};
-
-});
-
-
 
 /*
  * Routing Configuration
@@ -86,35 +82,35 @@ app.config(function($routeProvider) {
 		templateUrl : "home.html",
 		controller : 'homeController',
 		publicAccess : true
-	}).when("/andhra", {
+	}).when("/3", {
 		templateUrl : "andhrapradesh.html",
 		controller : 'homeController',
 		publicAccess : true
-	}).when("/telangana", {
+	}).when("/4", {
 		templateUrl : "telangana.html",
 		controller : 'homeController',
 		publicAccess : true
-	}).when("/national", {
+	}).when("/2", {
 		templateUrl : "national.html",
 		controller : 'homeController',
 		publicAccess : true
-	}).when("/international", {
+	}).when("/1", {
 		templateUrl : "international.html",
 		controller : 'homeController',
 		publicAccess : true
-	}).when("/sports", {
+	}).when("/7", {
 		templateUrl : "sports.html",
 		controller : 'homeController',
 		publicAccess : true
-	}).when("/study", {
+	}).when("/6", {
 		templateUrl : "study.html",
 		controller : 'homeController',
 		publicAccess : true
-	}).when("/jobs", {
+	}).when("/5", {
 		templateUrl : "jobs.html",
 		controller : 'homeController',
 		publicAccess : true
-	}).when("/movies", {
+	}).when("/8", {
 		templateUrl : "movies.html",
 		controller : 'homeController',
 		publicAccess : true

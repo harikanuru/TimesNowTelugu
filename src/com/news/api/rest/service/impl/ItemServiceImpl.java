@@ -40,6 +40,7 @@ public class ItemServiceImpl implements ItemService {
 		List<NewsItems> newItems = itemDao.getItems(categoryId);
 
 		List<NewsItemsDto> newsItemsDtoList = NewsItemUtils.convertNewsItemDaoListToDtoList(newItems);
+		System.out.println(newsItemsDtoList.size());
 
 		return newsItemsDtoList;
 	}
