@@ -16,5 +16,7 @@ public interface Queries {
 	String GET_NEWS_ITEMS = "select * from NewsItems where categoryId = ? limit 4";
 
 	String GET_ITEMS_BY_CATEGORY = "select * from NewsItems where categoryId = ?";
+	
+	String GET_ITEMS_BY_ITEM_ID = "select * from NewsItems where itemId = ?";
 
 }

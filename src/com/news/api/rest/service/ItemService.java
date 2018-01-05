@@ -13,6 +13,9 @@ public interface ItemService {
 	List<MainItemsDto> getItems();
 	
 	List<NewsItemsDto> getItems(int categoryId);
+	
+	NewsItemsDto getItemsById(int categoryId);
+
 
 
 }

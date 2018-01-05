@@ -72,4 +72,12 @@ public class ItemDaoImpl implements ItemDao {
 		return newsItems;
 	}
 
+	@Override
+	public NewsItems getItemsById(int itemId) {
+		NewsItems newsItems = jdbcTemplate.queryForObject(Queries.GET_ITEMS_BY_ITEM_ID, new Object[] { itemId },
+				new BeanPropertyRowMapper<NewsItems>(NewsItems.class));
+
+		return newsItems;
+	}
+
 }

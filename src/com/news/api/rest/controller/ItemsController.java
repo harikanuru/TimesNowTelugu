@@ -39,7 +39,6 @@ public class ItemsController {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response addItem(NewsItemsDto newsItem) {
 		
-		System.out.println("Controller "+newsItem.getHeading() +" "+ newsItem.getCategoryId()+" "+ newsItem.getNews());
         
 		return Response.status(200).entity(itemService.addNewsItem(newsItem)).build();
 	}
@@ -59,10 +58,18 @@ public class ItemsController {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getItems(@RequestBody CategoriesDto categories) {
 		
-		 System.out.println(categories.getCategoryId());
 
 		return Response.status(200).entity(itemService.getItems(categories.getCategoryId())).build();
 	}
 	
-	
+
+	@Path("/getItemsByCategory")
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getItemsById(@RequestBody NewsItemsDto newsItemDto) {
+		
+
+		return Response.status(200).entity(itemService.getItemsById(newsItemDto.getItemId())).build();
+	}
+
 }

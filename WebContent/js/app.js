@@ -47,6 +47,7 @@ app.controller('homeController',
 			}, function errorCallback(response) {
 				console.log(response);
 			});
+			
 
 			$scope.getItemsByCateogry = function(categoryId) {
 				console.log(categoryId);
@@ -61,7 +62,9 @@ app.controller('homeController',
 
 				}).then(function successCallback(response) {
 					$scope.newsItems = response.data;
-                    console.log($scope.newsItems[0]);
+					console.log($scope.newsItems);
+					console.log($scope.newsItems.length);
+
 					$location.path($scope.newsItems[0].categoryId+"");
 
 				}, function errorCallback(response) {
@@ -71,6 +74,10 @@ app.controller('homeController',
 				});
 
 			};
+			
+			$scope.getNewsDescription = function(itemId){
+				
+			}
 
 		});
 

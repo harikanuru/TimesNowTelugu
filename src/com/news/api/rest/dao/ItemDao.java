@@ -13,6 +13,9 @@ public interface ItemDao {
 	List<MainItems> getItems();
 	
 	List<NewsItems> getItems(int categoryId);
+	
+	NewsItems getItemsById(int categoryId);
+
 
 
 
