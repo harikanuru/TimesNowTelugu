@@ -21,13 +21,7 @@ public class CategoriesController {
 	// @Autowired
 	CategoryService categoryService = new CategoryServiceImpl();
 
-	@Path("/")
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	public String getWelcomeMessage() {
-
-		return "Category Message";
-	}
+	
 
 	@Path("/addCategory")
 	@POST
@@ -56,9 +50,8 @@ public class CategoriesController {
 
 		return Response.status(200).entity(categoryService.deleteCategory(categoriesDto)).build();
 	}
-	
-	@Path("/getCategories")
 	@GET
+	@Path("/getCategories")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getCategories() {
 

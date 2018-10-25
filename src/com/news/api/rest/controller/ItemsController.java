@@ -1,6 +1,5 @@
 package com.news.api.rest.controller;
 
-import javax.websocket.server.PathParam;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -25,18 +24,10 @@ public class ItemsController {
 
 	ItemService itemService = new ItemServiceImpl();
 	
-	@Path("/")
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	public String getWelcomeMessage() {
-
-		return "Item Message";
-	}
-	
 	@Path("/addItem")
 	@POST
-	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
 	public Response addItem(NewsItemsDto newsItem) {
 		
         
@@ -55,6 +46,7 @@ public class ItemsController {
 	
 	@Path("/getItemsByCategory")
 	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getItems(@RequestBody CategoriesDto categories) {
 		
@@ -63,13 +55,14 @@ public class ItemsController {
 	}
 	
 
-	@Path("/getItemsByCategory")
+/*	@Path("/getItemsByCategory")
 	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getItemsById(@RequestBody NewsItemsDto newsItemDto) {
 		
 
 		return Response.status(200).entity(itemService.getItemsById(newsItemDto.getItemId())).build();
-	}
+	}*/
 
 }

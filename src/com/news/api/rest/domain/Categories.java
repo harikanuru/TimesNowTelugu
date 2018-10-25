@@ -2,7 +2,6 @@ package com.news.api.rest.domain;
 
 import java.io.Serializable;
 
-import org.springframework.data.annotation.Id;
 
 
 

@@ -622,9 +622,9 @@
 	<properties>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<m2eclipse.wtp.contextRoot>/doobster</m2eclipse.wtp.contextRoot>
-		<maven.compiler.source>1.6</maven.compiler.source>
-		<maven.compiler.target>1.6</maven.compiler.target>
+		<m2eclipse.wtp.contextRoot>/TimesNowtelugu</m2eclipse.wtp.contextRoot>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 
 		<spring.version>4.0.2.RELEASE</spring.version>
 		<spring.security.version>3.2.5.RELEASE</spring.security.version>
