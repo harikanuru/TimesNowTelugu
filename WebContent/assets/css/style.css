@@ -133,7 +133,7 @@ font-size:18px;
 .dropdown-menu > li > a{clear:both; color:#ddd; background-color:#222; padding:10px 20px; font-family:'Oswald',sans-serif; -webkit-transition:all 0.5s; -mz-transition:all 0.5s; -ms-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{color:#fff}
 #newsSection{float:left; display:inline; width:100%; padding:0 30px; background-color:#fff; padding-bottom:20px}
-.latest_newsarea{float:left; display:inline; width:100%; background-color:#000; position:relative}
+.latest_newsarea{float:left; display:inline; width:100%; position:relative}/*background-color:#000; */
 .latest_newsarea span{ color:#fff; font-family:Oswald,sans-serif; font-size:15px; left:0; line-height:1.8em; margin-right:20px; overflow:hidden; padding:2px 18px 1px 19px; position:absolute; z-index:15}
 .social_area{ right:0; top:0;height:31px}
 .social_nav{ text-align:right}
@@ -195,9 +195,10 @@ font-size:18px;
 .right_content{float:left; display:inline; width:100%; min-height:300px}
 .spost_nav{}
 .spost_nav li{float:left; display:block; width:100%; margin-bottom:10px}
-.spost_nav .media-left{height:80px}
+.spost_nav .media-left{height:80px;float:left;}
 .media-left > img{height:80px; width:100px}
-.spost_nav .media-body > a{font-family:"Oswald",sans-serif}
+.center {text-align:center}
+.spost_nav .media-body {font-family:"Oswald,sans-serif";font-size:16px;}
 .featured_img{position:relative}
 .overlay:hover{ background:none repeat scroll 0 0 rgba(0,0,0,0.4)}
 .overlay{ bottom:0; display:block; left:0; position:absolute; width:100%; z-index:2; height:100%; -webkit-transition:all 0.5s; -mz-transition:all 0.5s; -ms-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
@@ -298,6 +299,12 @@ figure.effect-layla:hover figcaption::after, figure.effect-layla:hover h2, figur
 .related_post{display:inline; float:left; margin-top:0; width:100%; margin-bottom:20px}
 .related_post > h2{border-bottom:1px solid #e3e3e3; padding-bottom:5px}
 .related_post > h2 i{font-size:25px}
+img.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+.content p{margin-top:20px;font-size:15px;}
 .related_post .spost_nav li{width:32%; margin-right:10px}
 .related_post .spost_nav li:last-child{margin-right:0}
 .nav-slit a{position:fixed; top:50%; display:block; outline:none; text-align:left; z-index:1000; -webkit-transform:translateY(-50%); transform:translateY(-50%)}
@@ -325,6 +332,7 @@ figure.effect-layla:hover figcaption::after, figure.effect-layla:hover h2, figur
 .contact_form input[type="text"], .contact_form input[type="email"], .contact_form textarea{border-radius:0; margin-bottom:30px}
 .contact_form input[type="submit"]{border:medium none; color:#fff; height:35px; padding:5px 10px; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .contact_form input[type="submit"]:hover{border:1px solid #d083cf}
+.ticker01 li{float:left;}
 @media(max-width:1199px ){.logo_area{width:34%}.add_banner{width:580px}.nav-tabs > li{width:32.3%}.photograph_nav li{width:31.5%}
 @media(max-width:991px ){.add_banner{display:none}.logo_area{width:100%}.nav > li > a{padding:8px 8px}.latest_post_container{height:380px;overflow:hidden}#next-button{bottom:-2px}.single_iteam{height:415px}.photograph_nav li{width:47.7%}.related_post .spost_nav li{width:100%}.nav-tabs > li{width:31.9%}.nav-tabs > li > a{font-size:13px;padding-left:0 !important;padding-right:0 !important;text-align:center}}
 @media(max-width:767px ){.navbar-collapse{padding-left:15px}.mobile-show{display:block}.desktop-home{display:none}.navbar-inverse .navbar-nav > li > a{display:block}.header_top_left{width:100%}.header_top_right > p{display:none}.social_area{display:none}.single_iteam a{height:100%}.single_iteam a > img{height:100%}.error_page > a{margin-bottom:25px}.nav-tabs > li{width:32.6%}}

@@ -1,0 +1,279 @@
+
+<!--section id="newsSection">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 ">
+			<div class="latest_newsarea">
+				<span>తాజావార్తలు</span>
+				<marquee>
+					  <span ng-repeat="item in allItems">
+						  <img ng-src="{{item.image}}" style="padding-top:3px;">{{item.msg}}
+					  </span> 
+				</marquee>
+			</div>
+		</div>
+	</div>
+</section-->
+<section id="sliderSection">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 ">
+			<h2 class="mainheader">
+				<span>{{titleName}}</span>
+			</h2>
+		</div>
+		<div class="col-lg-9 col-md-12 col-sm-12">
+			<div class="total_slider">
+				<div class="title">
+					<h2 class="center">బేడీలు వేయటం పొరపాటే: మంత్రి</h2>
+					<img class="center" alt="" src="./images/NewsTitle/d1.jpg">
+				</div>
+				<div class="content">
+					<p>జకార్తా: మరో పెను విషాదం. ఘోర విమాన ప్రమాదం. ఇండోనేసియాకు చెందిన ‘లయన్‌ ఎయిర్‌’ విమానం సోమవారం గాల్లోకి లేచిన 13 నిమిషాల్లో జావా సముద్రంలో కూలిపోయింది. ఆ సమయంలో విమానంలో సిబ్బంది, ప్రయాణికులు కలిపి 189 మంది ఉన్నారు. అందరూ మరణించి ఉంటారని భావిస్తున్నారు. ఇప్పటికే కొన్ని మృతదేహాలు లభ్యమయ్యాయి. ‘ఫ్లైట్‌ జేటీ 610’ అనే ఈ విమానం ఇండోనేసియాలోని అతిపెద్ద చౌక విమానయాన సంస్థ ‘లయన్‌ ఎయిర్‌’కు చెందింది. బోయింగ్‌-737 మ్యాక్స్‌-8 శ్రేణికి చెందిన ఈ విమానం ఆగస్టు నుంచే వినియోగంలోకి వచ్చింది. 
+ప్రమాద విషయం తెలియగానే అధికారులు హుటాహుటిన సహాయ బృందాలను పంపారు. ప్రయాణికుల్లో ఎవరైనా సజీవంగా బయటపడ్డారేమోనని గాలింపు జరిపారు. ఎక్కడా వారి జాడ కనపడలేదు. సమయం గడిచేకొద్దీ ఆశలు సన్నగిల్లాయి. ఈలోగా కొన్ని మృతదేహాలు, అవయవాలను సహాయ బృందాలు గుర్తించాయి. చమురు తెట్టు, విమాన శకలాలు, చిన్నారుల బూట్లు, గుర్తింపు కార్డులు, సెల్‌ఫోన్‌ భాగాలు, లగేజీ వంటి ప్రయాణికుల సామాన్లు తేలియాడుతూ కనిపించాయి. అక్కడికి సమీపంలోని ఒక చమురు శుద్ధి కర్మాగారం వద్దకు కూడా శకలాలు కొట్టుకొచ్చాయి. గాలింపును రాత్రి మొత్తం కొనసాగిస్తామని అధికారులు తెలిపారు.</p>
+					<p>విమానానికి సంబంధించిన ప్రధాన శకలాన్ని ఇంకా కనుగొనాల్సి ఉందని సహాయ చర్యల విభాగం ఉన్నతాధికారి  బాంబాంగ్‌ సుర్యో చెప్పారు. ‘‘ఇప్పటివరకూ గుర్తించిన మృతదేహాలు బాగా దెబ్బతిన్నాయి. ప్రమాదం జరిగి ఇప్పటికే కొన్ని గంటలు గడిచిపోయాయి. అందువల్ల విమానంలోని 189 మంది చనిపోయి ఉంటారు’’ అని పేర్కొన్నారు. గాలింపు చర్యల్లో 40 మంది డైవర్లు సహా 150 మందితోపాటు నౌకలు, హెలికాప్టర్‌ పాలుపంచుకుంటున్నాయి.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-12 col-sm-12">
+			<div class="right_content">
+				<!--   <h2 class="headingDesign" style="border-bottom:3px solid rgba(245, 245, 245, 0.32)"></h2> -->
+				<div class="single_sidebar">
+					
+					<img class="center" alt="" src="./images/add1.png" style="width: 100%;">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--section id="contentSection">
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="left_content">
+				<h2 class="headingDesign">
+					<span>ఆంధ్రప్రదేశ్</span>
+				</h2>
+				<div class="single_post_content">
+					<div class="single_post_content_right">
+						<ul class="spost_nav">
+							<li ng-repeat="item in mainItems[2].newsItems"
+								class="contentcard">
+								<div class="media wow fadeInDown">
+									<a href="newsdescription.html" class="media-left"> <img
+										alt="" src="images/post_img1.jpg">
+									</a>
+									<div class="media-body">
+										<a href="newsdescription.html" class="catg_title">
+											{{item.heading}}</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+					</div>
+					<div ng-click="getItemsByCateogry(3)"
+						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+						<a href="#!/andhra">మరిన్ని</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="right_content">
+				<h2 class="headingDesign">
+					<span>తెలంగాణ</span>
+				</h2>
+				<div class="single_sidebar">
+					<ul class="spost_nav">
+						<li ng-repeat="item in mainItems[3].newsItems" class="contentcard">
+							<div class="media wow fadeInDown">
+								<a href="newsdescription.html" class="media-left"> <img
+									alt="" src="images/post_img1.jpg">
+								</a>
+								<div class="media-body">
+									<a href="newsdescription.html" class="catg_title">
+										{{item.heading}}</a>
+								</div>
+							</div>
+						</li>
+
+
+					</ul>
+					<div ng-click="getItemsByCateogry(4)"
+						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+						<a href="#!/telangana" style="color: #337ab7;">మరిన్ని</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="left_content">
+				<h2 class="headingDesign">
+					<span>సినిమాలు</span>
+				</h2>
+				<div class="single_post_content">
+					<div class="single_post_content_right">
+						<ul class="spost_nav">
+							<li ng-repeat="item in mainItems[7].newsItems"
+								class="contentcard">
+								<div class="media wow fadeInDown">
+									<a href="newsdescription.html" class="media-left"> <img
+										alt="" src="images/post_img1.jpg">
+									</a>
+									<div class="media-body">
+										<a href="newsdescription.html" class="catg_title">
+											{{item.heading}}</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div ng-click="getItemsByCateogry(8)"
+						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+						<a href="#!/movies" style="color: #337ab7;">మరిన్ని</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="right_content">
+				<h2 class="headingDesign">
+					<span>క్రీడలు</span>
+				</h2>
+				<div class="single_sidebar">
+					<ul class="spost_nav">
+						<li ng-repeat="item in mainItems[6].newsItems" class="contentcard">
+							<div class="media wow fadeInDown">
+								<a href="newsdescription.html" class="media-left"> <img
+									alt="" src="images/post_img1.jpg">
+								</a>
+								<div class="media-body">
+									<a href="newsdescription.html" class="catg_title">
+										{{item.heading}}</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div ng-click="getItemsByCateogry(7)"
+						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+						<a style="color: #337ab7;" href="#!/sports">మరిన్ని</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="left_content">
+				<h2 class="headingDesign">
+					<span>జాతీయం</span>
+				</h2>
+				<div class="single_post_content">
+					<div class="single_post_content_right">
+						<ul class="spost_nav">
+							<li ng-repeat="item in mainItems[1].newsItems"
+								class="contentcard">
+								<div class="media wow fadeInDown">
+									<a href="newsdescription.html" class="media-left"> <img
+										alt="" src="images/post_img1.jpg">
+									</a>
+									<div class="media-body">
+										<a href="newsdescription.html" class="catg_title">
+											{{item.heading}}</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div ng-click="getItemsByCateogry(2)"
+						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+						<a href="#!/national" style="color: #337ab7;">మరిన్ని</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="right_content">
+				<h2 class="headingDesign">
+					<span> అంతర్జాతీయ</span>
+				</h2>
+				<div class="single_sidebar">
+					<ul class="spost_nav">
+						<li ng-repeat="item in mainItems[0].newsItems" class="contentcard">
+							<div class="media wow fadeInDown">
+								<a href="newsdescription.html" class="media-left"> <img
+									alt="" src="images/post_img1.jpg">
+								</a>
+								<div class="media-body">
+									<a href="newsdescription.html" class="catg_title">
+										{{item.heading}}</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div ng-click="getItemsByCateogry(1)"
+						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+						<a href="#!/international" style="color: #337ab7;">మరిన్ని</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="left_content">
+				<h2 class="headingDesign">
+					<span>విద్య</span>
+				</h2>
+				<div class="single_post_content">
+					<div class="single_post_content_right">
+						<ul class="spost_nav">
+							<li ng-repeat="item in mainItems[5].newsItems"
+								class="contentcard">
+								<div class="media wow fadeInDown">
+									<a href="newsdescription.html" class="media-left"> <img
+										alt="" src="images/post_img1.jpg">
+									</a>
+									<div class="media-body">
+										<a href="newsdescription.html" class="catg_title">
+											{{item.heading}}</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div ng-click="getItemsByCateogry(6)"
+						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+						<a href="#!/study" style="color: #337ab7;">మరిన్ని</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="right_content">
+				<h2 class="headingDesign">
+					<span>ఉద్యోగాలు</span>
+				</h2>
+				<div class="single_sidebar">
+					<ul class="spost_nav">
+						<li ng-repeat="item in mainItems[4].newsItems" class="contentcard">
+							<div class="media wow fadeInDown">
+								<a href="newsdescription.html" class="media-left"> <img
+									alt="" src="images/post_img1.jpg">
+								</a>
+								<div class="media-body">
+									<a href="newsdescription.html" class="catg_title">
+										{{item.heading}}</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div ng-click="getItemsByCateogry(5)"
+						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
+						<a href="#!/jobs" style="color: #337ab7;">మరిన్ని</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section-->

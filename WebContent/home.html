@@ -4,8 +4,13 @@
 		<div class="col-lg-12 col-md-12 ">
 			<div class="latest_newsarea">
 				<span>తాజావార్తలు</span>
-				<ul id="ticker01" class="news_sticker">
-					<!--  
+				<marquee>
+					  <span ng-repeat="item in allItems">
+						  <img ng-src="{{item.image}}" style="padding-top:3px;">{{item.msg}}
+					  </span> 
+				</marquee>
+				<!--ul class="ticker01" class="news_sticker">
+					 
 					<li><a href="#"><img src="images/news_thumbnail3.jpg"
 							alt="">బేడీలు వేయటం పొరపాటే: మంత్రి</a></li>
 					<li><a href="#"><img src="images/news_thumbnail3.jpg"
@@ -23,12 +28,11 @@
 					<li><a href="#"><img src="images/news_thumbnail3.jpg"
 							alt="">సీబీఎస్‌ఈ స్కూళ్లలో ఆధార్‌ నమోదు కేంద్రాలు! </a></li>
 					<li><a href="#"><img src="images/news_thumbnail2.jpg"
-							alt="">రేపు పశ్చిమలో వైఎస్‌ జగన్‌ పర్యటన </a></li>-->
-				</ul>
+							alt="">రేపు పశ్చిమలో వైఎస్‌ జగన్‌ పర్యటన </a></li>
+				</ul-->
 			</div>
 		</div>
 	</div>
-	-->
 </section>
 <section id="sliderSection">
 	<div class="row">
@@ -41,10 +45,10 @@
 			<div class="total_slider">
 				<div class="card">
 					<carousel interval="myInterval"> <slide
-						ng-repeat="slide in slides1" active="slide.active"> <img
+						ng-repeat="slide in slides" active="slide.active"> <img
 						ng-src="{{slide.image}}" style="width: 100%; height: 350px;">
 
-					<div class="carousel-caption">బేడీలు వేయటం పొరపాటే: మంత్ర</div>
+					<div class="carousel-caption">{{slide.msg}}</div>
 					</slide> </carousel>
 					<!--      <img src="images/featured_img1.jpg" alt="Avatar" > -->
 					<!--  <div class="cardcontainer">
@@ -64,53 +68,17 @@
 				<!--   <h2 class="headingDesign" style="border-bottom:3px solid rgba(245, 245, 245, 0.32)"></h2> -->
 				<div class="single_sidebar">
 					<ul class="spost_nav">
-						<li class="contentcard">
+						<li class="contentcard" ng-repeat="item in newslist | limitTo: 4" ng-click=redirectPage(item.pageId,item.title)>
 							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img1.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title"> బేడీలు
-										వేయటం పొరపాటే: మంత్రి</a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" " class="media-left"> <img
-									alt="" src="images/post_img2.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title"> బేడీలు
-										వేయటం పొరపాటే: మంత్రి</a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img1.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title"> బేడీలు
-										వేయటం పొరపాటే: మంత్రి</a>
-								</div>
-							</div>
-						</li>
-						<li class="contentcard">
-							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img2.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title">
-										మరికొద్ది గంటల్లో మూడో ప్రపంచ యుద్ధం! </a>
+								<img
+									alt="" ng-src="{{item.image}}" class="media-left">
+								<div class="media-body">{{item.msg | limitTo: 50 }}....
 								</div>
 							</div>
 						</li>
 					</ul>
-					<div style="padding-right: 10px; text-align: right;">
-						<a href="fasionList.html" style="color: #337ab7;">మరిన్ని</a>
+					<div style="padding-right: 10px; text-align: right;" ng-if="newslist.length>4">
+						<a  ng-click=redirectlist() style="color: #337ab7;">మరిన్ని</a>
 					</div>
 					<!--  -->
 				</div>
@@ -126,26 +94,18 @@
 					<span>ఆంధ్రప్రదేశ్</span>
 				</h2>
 				<div class="single_post_content">
-					<div class="single_post_content_right">
-						<ul class="spost_nav">
-							<li ng-repeat="item in mainItems[2].newsItems"
-								class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img1.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">
-											{{item.heading}}</a>
-									</div>
+					<ul class="spost_nav">
+						<li class="contentcard" ng-repeat="item in newslist | limitTo: 4" ng-click=redirectPage(item.pageId,item.title)>
+							<div class="media wow fadeInDown">
+								<img
+									alt="" ng-src="{{item.image}}" class="media-left">
+								<div class="media-body">{{item.msg | limitTo: 50 }}....
 								</div>
-							</li>
-						</ul>
-
-					</div>
-					<div ng-click="getItemsByCateogry(3)"
-						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a href="#!/andhra">మరిన్ని</a>
+							</div>
+						</li>
+					</ul>
+					<div style="padding-right: 10px; text-align: right;" ng-if="newslist.length>4">
+						<a  ng-click=redirectlist() style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
 			</div>
@@ -156,24 +116,18 @@
 					<span>తెలంగాణ</span>
 				</h2>
 				<div class="single_sidebar">
-					<ul class="spost_nav">
-						<li ng-repeat="item in mainItems[3].newsItems" class="contentcard">
+<ul class="spost_nav">
+						<li class="contentcard" ng-repeat="item in newslist | limitTo: 4" ng-click=redirectPage(item.pageId,item.title)>
 							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img1.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title">
-										{{item.heading}}</a>
+								<img
+									alt="" ng-src="{{item.image}}" class="media-left">
+								<div class="media-body">{{item.msg | limitTo: 50 }}....
 								</div>
 							</div>
 						</li>
-
-
 					</ul>
-					<div ng-click="getItemsByCateogry(4)"
-						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a href="#!/telangana" style="color: #337ab7;">మరిన్ని</a>
+					<div style="padding-right: 10px; text-align: right;" ng-if="newslist.length>4">
+						<a  ng-click=redirectlist() style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
 			</div>
@@ -186,25 +140,18 @@
 					<span>సినిమాలు</span>
 				</h2>
 				<div class="single_post_content">
-					<div class="single_post_content_right">
-						<ul class="spost_nav">
-							<li ng-repeat="item in mainItems[7].newsItems"
-								class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img1.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">
-											{{item.heading}}</a>
-									</div>
+					<ul class="spost_nav">
+						<li class="contentcard" ng-repeat="item in newslist | limitTo: 4" ng-click=redirectPage(item.pageId,item.title)>
+							<div class="media wow fadeInDown">
+								<img
+									alt="" ng-src="{{item.image}}" class="media-left">
+								<div class="media-body">{{item.msg | limitTo: 50 }}....
 								</div>
-							</li>
-						</ul>
-					</div>
-					<div ng-click="getItemsByCateogry(8)"
-						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a href="#!/movies" style="color: #337ab7;">మరిన్ని</a>
+							</div>
+						</li>
+					</ul>
+					<div style="padding-right: 10px; text-align: right;" ng-if="newslist.length>4">
+						<a  ng-click=redirectlist() style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
 			</div>
@@ -216,21 +163,17 @@
 				</h2>
 				<div class="single_sidebar">
 					<ul class="spost_nav">
-						<li ng-repeat="item in mainItems[6].newsItems" class="contentcard">
+						<li class="contentcard" ng-repeat="item in newslist | limitTo: 4" ng-click=redirectPage(item.pageId,item.title)>
 							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img1.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title">
-										{{item.heading}}</a>
+								<img
+									alt="" ng-src="{{item.image}}" class="media-left">
+								<div class="media-body">{{item.msg | limitTo: 50 }}....
 								</div>
 							</div>
 						</li>
 					</ul>
-					<div ng-click="getItemsByCateogry(7)"
-						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a style="color: #337ab7;" href="#!/sports">మరిన్ని</a>
+					<div style="padding-right: 10px; text-align: right;" ng-if="newslist.length>4">
+						<a  ng-click=redirectlist() style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
 			</div>
@@ -243,25 +186,18 @@
 					<span>జాతీయం</span>
 				</h2>
 				<div class="single_post_content">
-					<div class="single_post_content_right">
-						<ul class="spost_nav">
-							<li ng-repeat="item in mainItems[1].newsItems"
-								class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img1.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">
-											{{item.heading}}</a>
-									</div>
+					<ul class="spost_nav">
+						<li class="contentcard" ng-repeat="item in newslist | limitTo: 4" ng-click=redirectPage(item.pageId,item.title)>
+							<div class="media wow fadeInDown">
+								<img
+									alt="" ng-src="{{item.image}}" class="media-left">
+								<div class="media-body">{{item.msg | limitTo: 50 }}....
 								</div>
-							</li>
-						</ul>
-					</div>
-					<div ng-click="getItemsByCateogry(2)"
-						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a href="#!/national" style="color: #337ab7;">మరిన్ని</a>
+							</div>
+						</li>
+					</ul>
+					<div style="padding-right: 10px; text-align: right;" ng-if="newslist.length>4">
+						<a  ng-click=redirectlist() style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
 			</div>
@@ -273,21 +209,17 @@
 				</h2>
 				<div class="single_sidebar">
 					<ul class="spost_nav">
-						<li ng-repeat="item in mainItems[0].newsItems" class="contentcard">
+						<li class="contentcard" ng-repeat="item in newslist | limitTo: 4" ng-click=redirectPage(item.pageId,item.title)>
 							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img1.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title">
-										{{item.heading}}</a>
+								<img
+									alt="" ng-src="{{item.image}}" class="media-left">
+								<div class="media-body">{{item.msg | limitTo: 50 }}....
 								</div>
 							</div>
 						</li>
 					</ul>
-					<div ng-click="getItemsByCateogry(1)"
-						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a href="#!/international" style="color: #337ab7;">మరిన్ని</a>
+					<div style="padding-right: 10px; text-align: right;" ng-if="newslist.length>4">
+						<a  ng-click=redirectlist() style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
 			</div>
@@ -300,25 +232,18 @@
 					<span>విద్య</span>
 				</h2>
 				<div class="single_post_content">
-					<div class="single_post_content_right">
-						<ul class="spost_nav">
-							<li ng-repeat="item in mainItems[5].newsItems"
-								class="contentcard">
-								<div class="media wow fadeInDown">
-									<a href="newsdescription.html" class="media-left"> <img
-										alt="" src="images/post_img1.jpg">
-									</a>
-									<div class="media-body">
-										<a href="newsdescription.html" class="catg_title">
-											{{item.heading}}</a>
-									</div>
+<ul class="spost_nav">
+						<li class="contentcard" ng-repeat="item in newslist | limitTo: 4" ng-click=redirectPage(item.pageId,item.title)>
+							<div class="media wow fadeInDown">
+								<img
+									alt="" ng-src="{{item.image}}" class="media-left">
+								<div class="media-body">{{item.msg | limitTo: 50 }}....
 								</div>
-							</li>
-						</ul>
-					</div>
-					<div ng-click="getItemsByCateogry(6)"
-						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a href="#!/study" style="color: #337ab7;">మరిన్ని</a>
+							</div>
+						</li>
+					</ul>
+					<div style="padding-right: 10px; text-align: right;" ng-if="newslist.length>4">
+						<a  ng-click=redirectlist() style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
 			</div>
@@ -330,21 +255,17 @@
 				</h2>
 				<div class="single_sidebar">
 					<ul class="spost_nav">
-						<li ng-repeat="item in mainItems[4].newsItems" class="contentcard">
+						<li class="contentcard" ng-repeat="item in newslist | limitTo: 4" ng-click=redirectPage(item.pageId,item.title)>
 							<div class="media wow fadeInDown">
-								<a href="newsdescription.html" class="media-left"> <img
-									alt="" src="images/post_img1.jpg">
-								</a>
-								<div class="media-body">
-									<a href="newsdescription.html" class="catg_title">
-										{{item.heading}}</a>
+								<img
+									alt="" ng-src="{{item.image}}" class="media-left">
+								<div class="media-body">{{item.msg | limitTo: 50 }}....
 								</div>
 							</div>
 						</li>
 					</ul>
-					<div ng-click="getItemsByCateogry(5)"
-						style="padding-right: 10px; text-align: right; padding-bottom: 10px;">
-						<a href="#!/jobs" style="color: #337ab7;">మరిన్ని</a>
+					<div style="padding-right: 10px; text-align: right;" ng-if="newslist.length>4">
+						<a  ng-click=redirectlist() style="color: #337ab7;">మరిన్ని</a>
 					</div>
 				</div>
 			</div>
